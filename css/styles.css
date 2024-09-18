@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-page {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif;
+} 
+
+.r-column{
+    width: 10%;
+    background-color: #F7F7F7;
+    padding-top: 1rem;
+}
+
+.r-alphabet{
+    background-color: #333C4E;
+    font-size: 50px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+
+}
+
+.text-column {
+    width: 70%;
+    background-color: #F7F7F7;
+}
+
+.romeo{
+    color: #333C4E;
+}
+
+.nav-column {
+    width: 20%;
+    background-color: F7F7F7;
+    margin-left: 10%;
+    background-color: white;
+}
+
+.nav-column h2{
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+}
+
+.nav-column a{
+    text-decoration: none;
+    color: black;
+}
+
+.list-item{
+    list-style-type: none;
+    padding-bottom: 1.5rem;
+}
+
+.text-column h5{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.text-column h1{
+    font-size: 48pt;
+}
+
+.text-column p{
+    padding-bottom: 0.5rem;
+}
+
+.brief-info{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.explore-work{
+    background-color: #F7F7F7;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family:'Helvetica Neue', sans-serif;
+}
