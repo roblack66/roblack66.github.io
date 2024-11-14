@@ -481,3 +481,113 @@ hr{
     font-weight: 400;
     font-style: normal;
 }
+
+/* Base Styles already present in your file */
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+    .main-page {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    .r-column {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .text-column {
+      width: 90%;
+      text-align: center;
+    }
+  
+    .hero-image {
+      width: 80%;
+      margin: 2rem auto;
+    }
+  
+    .nav-column {
+      width: 100%;
+      margin-top: 2rem;
+      text-align: center;
+    }
+  
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .three-images {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+  
+    .img1, .img2, .img3 {
+      width: 100%;
+    }
+  
+    .contact-us, .f-info, .flyer-port, .dev-main {
+      width: 95%;
+    }
+  
+    .first-set, .third-set, .dev-port {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .port-image, .port-image-tall {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  
+    .dev-port div {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .main-page {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: auto;
+    }
+  
+    .text-column, .nav-column, .r-column {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .hero-image {
+      width: 50%;
+    }
+  
+    .three-images {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .img1, .img2, .img3 {
+      width: 48%;
+    }
+  
+    .first-set, .third-set, .dev-port {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .port-image, .port-image-tall {
+      width: 48%;
+    }
+  
+    .dev-port div {
+      width: 48%;
+    }
+  }
+  
+  /* Existing Desktop Styles */
+  
