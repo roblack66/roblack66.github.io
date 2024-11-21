@@ -181,10 +181,11 @@
 } */
 
 .our-services{
-    background-color: white;
+    background: linear-gradient(to right, white 50%, #F7F7F7 50%);
     margin-top: 6rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
     padding-top: 2rem;
+    margin-bottom: 4.5rem;
 }
 
 .our-services h2{
@@ -409,7 +410,22 @@ hr{
 
 .services-hr{
     border: none;
-    border-top: 1.9px solid #FF4C33;
+    border-top: 2.5px solid #FF4C33;
+    width: 127px;
+    margin-left: 46.5%;
+    padding-bottom: 1rem;
+}
+
+.services-hr-project{
+    border: none;
+    border-top: 2.5px solid #FF4C33;
+    width: 265px;
+    margin-left: 13.5%;
+    padding-bottom: 1rem;
+}
+.skills-hr{
+    border: none;
+    border-top: 2.5px solid #FF4C33;
     width: 135px;
     margin-left: 10%;
     padding-bottom: 1rem;
@@ -427,16 +443,45 @@ hr{
     justify-content: space-around;
     width: 80%;
     object-fit: contain;
-    margin: auto;
+    padding-left: 23%;
+    padding-top: 1rem;
+}
+
+.dev-port-project{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    object-fit: contain;
+    /* padding-left: 23%; */
+    padding-top: 1rem;
+}
+
+.dev-port a{
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.dev-port-project a{
+    display: block;
+    padding-bottom: 0.5rem;
+    margin-left: 40%;
 }
 
 .dev-port img{
     width: 100%;
-    padding-bottom: 0.8rem;
-    
+    padding-bottom: 0.8rem; 
+}
+.dev-port-project img{
+    width: 100%;
+    padding-bottom: 0.8rem; 
+    margin-left: 50%;
 }
 
 .first-dev{
+    width: 30%;
+    padding-right: 10%;
+    object-fit: contain;
+}
+.first-dev-project{
     width: 30%;
     object-fit: contain;
 }
@@ -444,16 +489,46 @@ hr{
     width: 30%;
     object-fit: contain;
 }
+.second-dev-project{
+    width: 30%;
+    object-fit: contain;
+}
 .third-dev{
+    width: 30%;
+    object-fit: contain;
+}
+.third-dev-project{
     width: 30%;
     object-fit: contain;
 }
 
 .dev-main{
     margin-bottom: 2rem;
+
+    
+    
+}
+
+.main-main{
+    margin-bottom: 7rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background: linear-gradient(to right, #F7F7F7 60%, #F7F7F7 40%)
+}
+
+.dev-main-project{
+    margin-bottom: 7rem;
+    
 }
 
 .dev-main h1{
+    text-align: left;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.dev-main-project h1{
     text-align: left;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -472,6 +547,17 @@ hr{
     color: #FF4C33;
     text-underline-offset: 0.3rem;
 }
+.dev-main-project a{
+    list-style-type: none;
+    /* text-decoration: none; */
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #FF4C33;
+    text-underline-offset: 0.3rem;
+}
 
 .dev-main h2{
     padding-left: 10%;
@@ -480,6 +566,17 @@ hr{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    padding-left: 47.5%;
+}
+
+.dev-main-project h2{
+    padding-left: 13.5%;
+    /* padding-bottom: 3rem; */
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* padding-left: 47.5%; */
 }
 
 /* Base Styles already present in your file */
@@ -538,6 +635,11 @@ hr{
       width: 100%;
       align-items: center;
     }
+    .first-set, .third-set, .dev-port-project {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
   
     .port-image, .port-image-tall {
       width: 90%;
@@ -545,6 +647,9 @@ hr{
     }
   
     .dev-port div {
+      width: 100%;
+    }
+    .dev-port-project div {
       width: 100%;
     }
   }
