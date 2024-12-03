@@ -4,6 +4,11 @@
 
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .main-page {
     display: flex;
     justify-content: space-between;
@@ -579,120 +584,289 @@ hr{
     /* padding-left: 47.5%; */
 }
 
-/* Base Styles already present in your file */
+/* Add these media queries at the end of your existing CSS file */
 
-/* Mobile First Approach */
-@media (max-width: 768px) {
+/* For tablets and smaller desktops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
     .main-page {
-      flex-direction: column;
-      align-items: center;
-      height: auto;
+        flex-direction: column;
+        height: auto;
+        background: #F7F7F7;
     }
-  
-    .r-column {
-      width: 100%;
-      text-align: center;
+
+    .r-column, .nav-column {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
     }
-  
+
     .text-column {
-      width: 90%;
-      text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
-  
+
     .hero-image {
-      width: 80%;
-      margin: 2rem auto;
+        width: 60%;
+        margin: 2rem auto;
     }
-  
+
+    .three-images {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .img1, .img2, .img3 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .dev-port, .dev-port-project {
+        flex-direction: column;
+        padding-left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .first-dev, .second-dev, .third-dev,
+    .first-dev-project, .second-dev-project, .third-dev-project {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .dev-port-project img {
+        margin-left: 0;
+    }
+
+    .dev-port-project a {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .first-set, .third-set {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .port-image, .port-image-tall {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .f-info {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dev-port, .dev-port-project {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .dev-main-project img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .three-images img {
+        height: auto;
+    }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .text-column h1 {
+        font-size: 32pt;
+    }
+
     .nav-column {
-      width: 100%;
-      margin-top: 2rem;
-      text-align: center;
+        padding: 1rem;
     }
-  
+
+    .creative {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
     .nav-items {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .three-images {
-      flex-direction: column;
-      width: 100%;
-      gap: 1rem;
+
+    .list-item {
+        padding-bottom: 1rem;
     }
-  
-    .img1, .img2, .img3 {
-      width: 100%;
+
+    .f-info {
+        padding: 1rem;
+        text-align: center;
     }
-  
-    .contact-us, .f-info, .flyer-port, .dev-main {
-      width: 95%;
+
+    .services-hr, .skills-hr, .gallery-hr {
+        margin-left: auto;
+        margin-right: auto;
     }
-  
-    .first-set, .third-set, .dev-port {
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
+
+    .our-services h2,
+    .dev-main h2,
+    .dev-main-project h2 {
+        text-align: center;
+        padding-left: 0;
     }
-    .first-set, .third-set, .dev-port-project {
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
+
+    .contact-us {
+        width: 100%;
+        padding: 2rem 0;
     }
-  
-    .port-image, .port-image-tall {
-      width: 90%;
-      margin-bottom: 1rem;
-    }
-  
-    .dev-port div {
-      width: 100%;
-    }
-    .dev-port-project div {
-      width: 100%;
-    }
-  }
-  
-  @media (min-width: 769px) and (max-width: 1200px) {
+
     .main-page {
-      flex-direction: row;
-      flex-wrap: wrap;
-      height: auto;
+        padding: 1rem;
+        width: auto;
     }
-  
-    .text-column, .nav-column, .r-column {
-      width: 100%;
-      text-align: center;
+
+    .contact-us {
+        width: auto;
+        padding: 2rem 1rem;
     }
-  
+
+    .our-services {
+        width: 100%;
+        padding: 2rem 0;
+    }
+}
+
+/* For very small devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .text-column h1 {
+        font-size: 24pt;
+    }
+
     .hero-image {
-      width: 50%;
+        width: 80%;
     }
-  
-    .three-images {
-      width: 100%;
-      flex-wrap: wrap;
-      gap: 1rem;
+
+    .explore-work {
+        padding: 8px 16px;
+        font-size: 14px;
     }
-  
-    .img1, .img2, .img3 {
-      width: 48%;
+
+    .r-alphabet {
+        font-size: 36px;
     }
-  
-    .first-set, .third-set, .dev-port {
-      flex-wrap: wrap;
-      gap: 1rem;
+
+    .f-info {
+        font-size: 12px;
     }
-  
-    .port-image, .port-image-tall {
-      width: 48%;
+
+    .text-column {
+        padding: 0 1rem;
     }
-  
-    .dev-port div {
-      width: 48%;
+
+    .services-hr-project, .services-hr {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
     }
-  }
-  
-  /* Existing Desktop Styles */
-  
+}
+
+/* Fix for smooth scrolling on all devices */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix for image links */
+.img1 a, .img2 a, .img3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Add these rules to maintain styling for the clickable area */
+.img1 a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img1 a:hover {
+    cursor: pointer;
+}
+
+/* Ensure the gradient and text overlay work with the link */
+.img1 a .gradient,
+.img1 a .text-overlay {
+    position: absolute;
+}
+
+/* Keep the hover effect working */
+.img1:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+    transition: 1.5s ease;
+}
+
+/* Add these rules to maintain styling for img2 clickable area */
+.img2 a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img2 a:hover {
+    cursor: pointer;
+}
+
+/* Ensure the gradient and text overlay work with the link */
+.img2 a .gradient,
+.img2 a .text-overlay {
+    position: absolute;
+}
+
+/* Keep the hover effect working */
+.img2:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+    transition: 1.5s ease;
+}
+
+/* Add these rules to maintain styling for img3 clickable area */
+.img3 a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img3 a:hover {
+    cursor: pointer;
+}
+
+/* Ensure the gradient and text overlay work with the link */
+.img3 a .gradient,
+.img3 a .text-overlay {
+    position: absolute;
+}
+
+/* Keep the hover effect working */
+.img3:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+    transition: 1.5s ease;
+}
+
