@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Project Details</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: "Josefin Sans", sans-serif;
+            color: #333;
+        }
+
+        .project-details {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .project-image-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 25px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-title {
+            color: #FF4C33;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .project-description {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .tools-used {
+            margin: 25px 0;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .tools-used h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tool-tag {
+            background: #FF4C33;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #FF4C33;
+        }
+
+        .project-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+        }
+
+        .project-link:hover {
+            background-color: #FF4C33;
+            color: white;
+            border-color: #FF4C33;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 20px;
+            }
+
+            .project-title {
+                font-size: 1.5em;
+            }
+
+            .project-links {
+                grid-template-columns: 1fr;
+            }
+
+            .project-image-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const cards = document.querySelectorAll('.project-card');
+                cards.forEach(card => card.style.display = 'none');
+                
+                const selectedCard = document.querySelector(hash);
+                if (selectedCard) {
+                    selectedCard.style.display = 'block';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="project-details">
+        <a href="index.html#front-end-projects" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-card" id="portfolio">
+            <div class="project-image-container">
+                <img src="./assets/Screenshot 2024-10-26 121437.png" alt="Personal Portfolio" class="project-image">
+            </div>
+            <h2 class="project-title">Personal Portfolio</h2>
+            <div class="project-description">
+                <p>A modern and responsive personal portfolio website showcasing my skills, projects, and professional experience. Features a clean design with smooth animations and intuitive navigation.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">HTML5</span>
+                    <span class="tool-tag">CSS3</span>
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">Responsive Design</span>
+                    <span class="tool-tag">CSS Grid</span>
+                    <span class="tool-tag">Flexbox</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/roblack66/roblack66.github.io" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://roblack66.github.io/" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="willow-spa">
+            <div class="project-image-container">
+                <img src="./assets/Screenshot 2024-10-26 121211.png" alt="Willow Spa Website" class="project-image">
+            </div>
+            <h2 class="project-title">Willow Spa Website</h2>
+            <div class="project-description">
+                <p>A luxurious spa website with elegant design and smooth user experience. Features service listings, booking functionality, and testimonials section. The design focuses on creating a relaxing and premium feel.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">HTML5</span>
+                    <span class="tool-tag">CSS3</span>
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">CSS Animations</span>
+                    <span class="tool-tag">Responsive Design</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/roblack66/willow-spa" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://roblack66.github.io/willow-spa/" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="real-estate">
+            <div class="project-image-container">
+                <img src="./assets/Screenshot 2024-10-26 121407.png" alt="RoBLack Homes" class="project-image">
+            </div>
+            <h2 class="project-title">RoBLack Homes</h2>
+            <div class="project-description">
+                <p>A modern real estate landing page with property listings and search functionality. Features a clean, professional design with property cards, filtering options, and contact forms.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">HTML5</span>
+                    <span class="tool-tag">CSS3</span>
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">CSS Grid</span>
+                    <span class="tool-tag">Responsive Design</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/roblack66/real-estate-landing-page" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://roblack66.github.io/real-estate-landing-page/" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

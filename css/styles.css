@@ -457,7 +457,6 @@ hr{
     justify-content: space-around;
     width: 80%;
     object-fit: contain;
-    /* padding-left: 23%; */
     padding-top: 1rem;
 }
 
@@ -868,5 +867,50 @@ html {
     opacity: 0.9;
     transform: scale(0.9);
     transition: 1.5s ease;
+}
+
+/* Update the project image link styles */
+.project-image-link {
+    display: block;
+    width: 100%;
+    margin-left: 50%;
+}
+
+.project-image-link img {
+    width: 100%;
+    padding-bottom: 0.8rem;
+}
+
+/* Keep existing styles but update these properties */
+.dev-port-project {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    object-fit: contain;
+    padding-top: 1rem;
+}
+
+.first-dev-project,
+.second-dev-project,
+.third-dev-project {
+    width: 30%;
+    object-fit: contain;
+}
+
+/* Fix image alignment with text */
+.first-dev-project a,
+.second-dev-project a,
+.third-dev-project a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Maintain image dimensions */
+.dev-port-project img {
+    width: 100%;
+    padding-bottom: 0.8rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 

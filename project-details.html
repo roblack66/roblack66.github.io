@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: "Josefin Sans", sans-serif;
+            color: #333;
+        }
+
+        .project-details {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .project-image-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 25px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-title {
+            color: #FF4C33;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .project-description {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .tools-used {
+            margin: 25px 0;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .tools-used h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tool-tag {
+            background: #FF4C33;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #FF4C33;
+        }
+
+        .project-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+        }
+
+        .project-link:hover {
+            background-color: #FF4C33;
+            color: white;
+            border-color: #FF4C33;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                padding: 20px;
+            }
+
+            .project-title {
+                font-size: 1.5em;
+            }
+
+            .project-links {
+                grid-template-columns: 1fr;
+            }
+
+            .project-image-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const cards = document.querySelectorAll('.project-card');
+                cards.forEach(card => card.style.display = 'none');
+                
+                const selectedCard = document.querySelector(hash);
+                if (selectedCard) {
+                    selectedCard.style.display = 'block';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="project-details">
+        <a href="index.html#backend-apis" class="back-button">← Back to Portfolio</a>
+        
+        <div class="project-card" id="school-app">
+            <div class="project-image-container">
+                <img src="./assets/Blue White Modern Shocking YouTube Thumbnail.png" alt="School Management System" class="project-image">
+            </div>
+            <h2 class="project-title">School Management System</h2>
+            <div class="project-description">
+                <p>A comprehensive school management system that helps administrators, teachers, and students manage academic activities efficiently. The system includes features for attendance tracking, grade management, and communication between stakeholders.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">Node.js</span>
+                    <span class="tool-tag">Express</span>
+                    <span class="tool-tag">MongoDB</span>
+                    <span class="tool-tag">React</span>
+                    <span class="tool-tag">JWT</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://documenter.getpostman.com/view/39689182/2sAY547KNC" target="_blank" class="project-link">API Documentation</a>
+                <a href="https://github.com/Team-Skemishis/School-App-Backend" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://schoolmgtwebapp.netlify.app/" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="advert-app">
+            <div class="project-image-container">
+                <img src="./assets/Orange White Modern Daily Podcast YouTube Thumbnail.png" alt="Advertisement Platform" class="project-image">
+            </div>
+            <h2 class="project-title">Advertisement Platform</h2>
+            <div class="project-description">
+                <p>A digital advertising platform that connects advertisers with their target audience. Features include campaign management, analytics, and automated ad placement.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">Node.js</span>
+                    <span class="tool-tag">Express</span>
+                    <span class="tool-tag">PostgreSQL</span>
+                    <span class="tool-tag">React</span>
+                    <span class="tool-tag">Redux</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://documenter.getpostman.com/view/38771455/2sAXxY59Pj" target="_blank" class="project-link">API Documentation</a>
+                <a href="https://github.com/web-architectx/advert-app-back" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://advert-app-mest.netlify.app" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="library-app">
+            <div class="project-image-container">
+                <img src="./assets/Yellow and Black Modern How To Make YouTube Thumbnail.png" alt="Library Management System" class="project-image">
+            </div>
+            <h2 class="project-title">Library Management System</h2>
+            <div class="project-description">
+                <p>A digital library management system that helps track books, manage memberships, and handle book lending operations. Includes features for book searching, reservation, and fine calculation.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">Node.js</span>
+                    <span class="tool-tag">Express</span>
+                    <span class="tool-tag">MongoDB</span>
+                    <span class="tool-tag">React</span>
+                    <span class="tool-tag">Material-UI</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://documenter.getpostman.com/view/38771455/2sAYQgfng8" target="_blank" class="project-link">API Documentation</a>
+                <a href="https://github.com/web-architectx/library-app-backend" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://github.com/web-architectx/library-app-backend" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="weather-app">
+            <div class="project-image-container">
+                <img src="./assets/Blue Minimalist YouTube Thumbnail.png" alt="Weather Application" class="project-image">
+            </div>
+            <h2 class="project-title">Weather Application</h2>
+            <div class="project-description">
+                <p>A real-time weather application that provides current weather conditions and forecasts for locations worldwide. Features include temperature tracking, precipitation forecasts, and weather alerts.</p>
+            </div>
+            <div class="tools-used">
+                <h3>Tools & Technologies Used:</h3>
+                <div class="tools-list">
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">Weather API</span>
+                    <span class="tool-tag">HTML5</span>
+                    <span class="tool-tag">CSS3</span>
+                    <span class="tool-tag">REST API</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://roblack66.github.io/willow-spa/" target="_blank" class="project-link">API Documentation</a>
+                <a href="https://github.com/roblack66/ro-weather" target="_blank" class="project-link">Github Repository</a>
+                <a href="https://roblack66.github.io/ro-weather/" target="_blank" class="project-link">Live Website</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
